@@ -1,0 +1,47 @@
+:root {
+  --ink: #1f3a5f;
+  --ink-soft: #4a6385;
+  --paper: #f7f9fc;
+  --turmeric: #e0a526;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e6edf7;
+    --ink-soft: #a9b8cc;
+    --paper: #12233a;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; height: 100%; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  line-height: 1.5;
+}
+
+.page {
+  min-height: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 18vh 1.5rem 4rem;
+}
+
+.wordmark {
+  margin: 0 0 1.5rem;
+  font-size: clamp(3.5rem, 14vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  border-left: 0.35rem solid var(--turmeric);
+  padding-left: 1rem;
+}
+
+.lede { margin: 0 0 1rem; font-size: 1.25rem; }
+
+.status { margin: 0; color: var(--ink-soft); }
