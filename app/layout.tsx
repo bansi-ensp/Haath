@@ -16,7 +16,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <p className="proto-banner">Prototype with sample people. Nothing here is real.</p>
+        <div className="app">{children}</div>
+      </body>
     </html>
   );
 }
